@@ -1,0 +1,36 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Eat-Da-Burger</h1>
+    <img src="./assets/img/burger-smaller.png">
+    <br><br>
+    <form class="create-form">
+    <div class="form-group">
+      <label for="burger">Burger Name:</label>
+      <input type="text" id="burger" name="name">
+      <button id="submit" type="submit">Add Burger</button>
+    </div>
+  </form>
+  </div>
+</div>
+<div class="container">
+<div class ="row">
+  <div class="col-6">
+    <ul id="uneaten">
+      {{#each burgers}}
+        {{#unless devoured}}
+          {{> burger-eaten devour=true}}
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-6">
+    <ul id="eaten">
+      {{#each burgers}}
+        {{#if devoured}}
+          {{> burger-eaten devour=false}}
+        {{/if}}
+      {{/each}}
+    </ul>
+  </div>
+  </div>
+</div>
