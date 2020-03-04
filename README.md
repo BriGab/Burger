@@ -8,4 +8,7 @@ NPM installs required:
 * Express-Handlebars
 * MySQL
 
+This application is live on Heroku for viewing at this link:
 
+
+![Screenshot of Application](public/assets/img/Burger-App-Screenshot.JPG)
